@@ -1,15 +1,29 @@
 // customize js
 $(function() {
-    $(function() {
-        $(window).scroll(function() {
-            // var HEIGHT = $(window).scrollTop() + $('.title').innerHeight();
-            var HEIGHT = $(window).scrollTop() - $('.title').offset().top + 10;
-            if ($(window).scrollTop() > 100) {
-                $(".publish_block").stop().stop().delay(200).animate({ top: HEIGHT }, 400, 'easeOutQuint');
-            } else {
-                $(".publish_block").stop().stop().delay(200).animate({ top: '0px' }, 400, 'easeOutQuint').removeAttr('style');
-            }
-        });
+    var subStatus = false;
+    $('.now_edit').find('.btn_change').off().click(function(e) {
+        if (!subStatus) {
+            $('.sub_nav').addClass('show_subNav');
+            subStatus = true;
+        }else{
+            $('.sub_nav').removeClass('show_subNav');
+            subStatus = false;
+        }
+        e.preventDefault();
+    });
+    $('.sub_nav').find('.close').off().click(function(e) {
+        $('.sub_nav').removeClass('show_subNav');
+        subStatus = false;
+        e.preventDefault();
+    });
+    $(window).scroll(function() {
+        // var HEIGHT = $(window).scrollTop() + $('.title').innerHeight();
+        var HEIGHT = $(window).scrollTop() - $('.title').offset().top + 10;
+        if ($(window).scrollTop() > 100) {
+            $(".publish_block").stop().stop().delay(200).animate({ top: HEIGHT }, 400, 'easeOutQuint');
+        } else {
+            $(".publish_block").stop().stop().delay(200).animate({ top: '0px' }, 400, 'easeOutQuint').removeAttr('style');
+        }
     });
     // password_toggle
     var passShow = false;
@@ -216,8 +230,10 @@ $(function() {
     $(document).mouseup(function(e) {
         var target = e.target,
             container = $('.dropdown-content');
-        if ((!container.is(e.target) && container.has(e.target).length === 0) && !$('.dropdown-btn').is(e.target)) {
-            container.removeClass('show');
+        if ((!container.is(e.target) && container.has(e.target).length === 0) && (!$('.dropdown-btn').is(e.target) || !$('.btn-dropdown').is(e.target))) {
+            if (!(($('.dropdown-btn').is(e.target) || $('.btn-dropdown').is(e.target)) && ($(target).siblings('.show').length > 0))) {
+                container.removeClass('show');
+            }
         }
     });
     //----------------------------------------------------------選單控制-----//
@@ -253,6 +269,10 @@ $(function() {
             $('header').removeClass('full');
             $('.content').removeClass('full');
             sideStatus = false;
+        }
+        if(subStatus =-true){
+            $('.sub_nav').removeClass('show_subNav');
+            subStatus = false;
         }
         $('.li_hasChild>a').find('.ink').remove();
         $(this).blur();
