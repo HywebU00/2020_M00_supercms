@@ -5,7 +5,7 @@ $(function() {
         if (!subStatus) {
             $('.sub_nav').addClass('show_subNav');
             subStatus = true;
-        }else{
+        } else {
             $('.sub_nav').removeClass('show_subNav');
             subStatus = false;
         }
@@ -115,6 +115,16 @@ $(function() {
         e.preventDefault();
     });
     //
+    $('input[type="text"]').each(function(index, el) {
+        if ($(this).val() !== '') {
+            $(this).addClass('used');
+        }
+    });
+    $('textarea').each(function(index, el) {
+        if ($(this).val() !== '') {
+            $(this).addClass('used');
+        }
+    });
     $('.flex-form .error').each(function(index, el) {
         $(this).find('input').addClass('used');
         $(this).find('textarea').addClass('used');
@@ -270,7 +280,7 @@ $(function() {
             $('.content').removeClass('full');
             sideStatus = false;
         }
-        if(subStatus =-true){
+        if (subStatus = -true) {
             $('.sub_nav').removeClass('show_subNav');
             subStatus = false;
         }
