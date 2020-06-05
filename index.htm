@@ -1,254 +1,421 @@
 <!doctype html>
-<html lang="zh-Hant" class="no-js">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>單位名稱切版檔案</title>
-    <!--[if lt IE 9]>
+    <title>SuperCMS</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-    <style>
-    * {
-        box-sizing: border-box;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
-    }
-    a {
-        text-decoration: none;
-        color: #039
-    }
-    .wrapper {
-        max-width: 1000px;
-        margin: 3em auto 1em;
-        padding: 15px 15px 3em;
-        clear: both
-    }
-    .wrapper h1 {
-        display: block;
-        margin: 0px auto;
-        border-bottom: 1px solid #CCC;
-        max-width: 100%;
-        text-align: center;
-        margin-bottom: 1em
-    }
-    body {
-        background: #F7F7F7;
-        counter-reset: num
-    }
-    .preview {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        text-align: center
-    }
-    .preview li {
-        width: 40%;
-        display: inline-block;
-        margin: 0 2.5% 1em
-    }
-    .preview li a {
-        display: block;
-        width: 100%;
-        height: 330px;
-        font-size: 2em;
-        color: #333;
-        text-decoration: none
-    }
-    .preview li a:hover img {
-        transform: scale(1.05)
-    }
-    @media screen and (max-width:767px) {
-        .preview li {
-            width: 90%;
-            margin: 0 auto 2em;
-            height: auto
-        }
-        .preview li a {
-            height: auto
-        }
-    }
-    .preview li a span {
-        display: block
-    }
-    .preview li a img {
-        transition: .3s ease-out;
-        width: 100%;
-        border-radius: .5em;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, .2)
-    }
-    table {
-        width: 100%;
-        border-collapse: collapse
-    }
-    table th {
-        border-bottom: 2px solid #888
-    }
-    table th, table td {
-        text-align: left;
-        padding: .5em
-    }
-    table td {
-        border-bottom: 1px solid #BBB
-    }
-    table th:first-child {
-        width: 65px
-    }
-    table th:last-child {
-        width: 100px
-    }
-    table .title {
-        text-align: center;
-        font-weight: bold;
-        background: rgba(0, 0, 0, .05)
-    }
-    table tr:hover {
-        background: rgba(255, 255, 255, .4)
-    }
-    span.notyet {
-        display: block;
-        background: #666;
-        color: #FFF;
-        border-radius: 4px;
-        padding: .2em 1em;
-        text-align: center;
-        font-size: .875em
-    }
-    span.ok {
-        display: block;
-        background: #0c0;
-        color: #FFF;
-        border-radius: 4px;
-        padding: .2em 1em;
-        text-align: center;
-        font-size: .875em
-    }
-    span.ing {
-        display: block;
-        background: #f66;
-        color: #FFF;
-        border-radius: 4px;
-        padding: .2em 1em;
-        text-align: center;
-        font-size: .875em
-    }
-    .btn {
-        width: 200px;
-        padding: .5em;
-        text-align: center;
-        background: #06f;
-        border-radius: .4em;
-        display: block;
-        margin: 1em auto;
-        color: #FFF
-    }
-    .btn:hover {
-        background: #03c
-    }
-    </style>
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/supercms.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/github-gist.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <h1>superCMS</h1>
-        <div class="table_wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>編號</th>
-                        <th>頁面</th>
-                        <th>檔案</th>
-                        <th>狀態</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="4" class="title">共通元素</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>格線系統</td>
-                        <td><a href="basic_gridsystem.htm"></a></td>
-                        <td><span class="notyet">待確認</span></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>基礎組件</td>
-                        <td><a href="basic_conponent.htm"></a></td>
-                        <td><span class="notyet">待確認</span></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>表單</td>
-                        <td><a href="basic_form.htm"></a></td>
-                        <td><span class="notyet">待確認</span></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4" class="title">基本範例頁面</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>表格列表樣式</td>
-                        <td><a href="basic_table.htm"></a></td>
-                        <td><span class="notyet">待確認</span></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>卡片列表樣式</td>
-                        <td><a href="basic_card.htm"></a></td>
-                        <td><span class="notyet">待確認</span></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>widget+內容樣式</td>
-                        <td><a href="basic_widget.htm"></a></td>
-                        <td><span class="notyet">待確認</span></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>表單+發布區塊</td>
-                        <td><a href="basic_form_layout.htm"></a></td>
-                        <td><span class="notyet">待確認</span></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4" class="title">特殊範例頁面</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>多媒體資料庫</td>
-                        <td><a href="media01_list.htm"></a></td>
-                        <td><span class="notyet">待確認</span></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4" class="title">權限管理</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>使用者管理</td>
-                        <td><a href="user01_list.htm"></a></td>
-                        <td><span class="notyet">待確認</span></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>新增管理</td>
-                        <td><a href="user01_add.htm"></a></td>
-                        <td><span class="notyet">待確認</span></td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- 主要內容區 -->
+        <div class="content">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="light.htm">首頁</a></li>
+                    <li><a href="#">節點</a></li>
+                    <li>節點</li>
+                </ul>
+            </div>
+            <!-- gird section -->
+            <div class="grid">
+                <div class="container">
+                    <div class="title">
+                        <h2>系統首頁儀表板</h2>
+                    </div>
+                    <div class="flex-3-3-3-3">
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>今日訪客人數</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="mp_widget">
+                                        <div class="widget_now_counter">
+                                            <div data-num="1537"></div>
+                                        </div>
+                                        <div class="help">時間以...為計算準</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>今日瀏覽量</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="mp_widget">
+                                        <div class="widget_now_pageview">
+                                            <div data-num="97654"></div>
+                                        </div>
+                                        <div class="help">時間以...為計算準</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>目前站上使用者</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="mp_widget ">
+                                        <div class="widget_now_user">
+                                            <div data-num="376"></div>
+                                        </div>
+                                        <div class="help">時間以...為計算準</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>今日新增資料</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="mp_widget">
+                                        <div class="widget_new_data">
+                                            <div data-num="20">20</div>
+                                        </div>
+                                        <div class="help">時間以...為計算準</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-8-4">
+                        <div class="col ">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>網站流量</h3>
+                                </div>
+                                <div class="_content">
+                                    <!-- 長條圖 -->
+                                    <figure class="highcharts-figure">
+                                        <div id="axes_line_column1"></div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>數據分析</h3>
+                                </div>
+                                <div class="_content">
+                                    <!-- 圓餅圖 -->
+                                    <figure class="highcharts-figure">
+                                        <div id="pie1"></div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-6-6">
+                        <div class="col ">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>今日熱門網頁</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="table_wrapper">
+                                        <table class="table_hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>序列</th>
+                                                    <th>標題</th>
+                                                    <th>瀏覽量</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="text-left">
+                                                        <a href="#">大更沒於正時節直只們來壓算有先，求化化看雨的</a>
+                                                    </td>
+                                                    <td class="text-left">1,523</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td class="text-left">
+                                                        <a href="#">司通資鄉下一支情西也哥際發你也是濟言通海後的健童</a>
+                                                    </td>
+                                                    <td class="text-left">823</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td class="text-left">
+                                                        <a href="#">大只再筆不人油畫主甚是活相面飛</a>
+                                                    </td>
+                                                    <td class="text-left">253</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td class="text-left">
+                                                        <a href="#">期完那照角金直麼應式少說</a>
+                                                    </td>
+                                                    <td class="text-left">102</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td class="text-left">
+                                                        <a href="#">大只再筆不人油畫主甚是活相面飛</a>
+                                                    </td>
+                                                    <td class="text-left">50</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td class="text-left">
+                                                        <a href="#">過比你三觀不比想面發比望麼到發濟家飯年經產</a>
+                                                    </td>
+                                                    <td class="text-left">15</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="content_block">
+                                <div class="_head">
+                                    <h3>公告資訊</h3>
+                                </div>
+                                <div class="_content">
+                                    <div class="table_wrapper">
+                                        <table class="table_hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>序列</th>
+                                                    <th>標題</th>
+                                                    <th>發布時間</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="text-left">
+                                                        <a href="#">大更沒於正時節直只們來壓算有先，求化化看雨的</a>
+                                                    </td>
+                                                    <td class="text-left"><time>2020/01/01</time></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td class="text-left">
+                                                        <a href="#">司通資鄉下一支情西也哥際發你也是濟言通海後的健童</a>
+                                                    </td>
+                                                    <td class="text-left"><time>2020/01/01</time></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td class="text-left">
+                                                        <a href="#">大只再筆不人油畫主甚是活相面飛</a>
+                                                    </td>
+                                                    <td class="text-left"><time>2020/01/01</time></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td class="text-left">
+                                                        <a href="#">期完那照角金直麼應式少說</a>
+                                                    </td>
+                                                    <td class="text-left"><time>2020/01/01</time></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td class="text-left">
+                                                        <a href="#">大只再筆不人油畫主甚是活相面飛</a>
+                                                    </td>
+                                                    <td class="text-left"><time>2020/01/01</time></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td class="text-left">
+                                                        <a href="#">過比你三觀不比想面發比望麼到發濟家飯年經產</a>
+                                                    </td>
+                                                    <td class="text-left"><time>2020/01/01</time></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <!-- JS-->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="vendor/jquery.easing.min.js"></script>
+    <!-- template customize js -->
+    <script src="js/customize.js"></script>
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack.js"></script>
     <script>
-    jQuery(document).ready(function($) {
-        $('td').each(function(index, el) {
-            var link = $(this).find('a').attr('href');
-            $(this).find('a').text(link);
-        });
+    hljs.initHighlightingOnLoad();
+    </script>
+    <!-- highchart -->
+    <!-- highchart plugin -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
+    <script>
+    $('header').load("header.htm");
+    $('aside').load("aside.htm");
+    var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
+    // 長條結合折線圖
+    Highcharts.chart('axes_line_column1', {
+        chart: {
+            zoomType: 'xy'
+        },
+        title: {
+            text: '圖表標題(可省略)'
+        },
+        subtitle: {
+            text: 'Source: WorldClimate.com'
+        },
+        colors: _Color,
+        xAxis: [{
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                format: '{value}°C',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            title: {
+                text: 'Temperature',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            }
+        }, { // Secondary yAxis
+            title: {
+                text: 'Rainfall',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            labels: {
+                format: '{value} mm',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            opposite: true
+        }],
+        tooltip: {
+            shared: true
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            x: 120,
+            verticalAlign: 'top',
+            y: 100,
+            floating: true,
+            backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
+                'rgba(255,255,255,0.25)'
+        },
+        series: [{
+            name: 'Rainfall',
+            type: 'column',
+            yAxis: 1,
+            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+            tooltip: {
+                valueSuffix: ' mm'
+            }
+        }, {
+            name: 'Temperature',
+            type: 'spline',
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+            tooltip: {
+                valueSuffix: '°C'
+            }
+        }]
+    });
+    // pie
+    Highcharts.chart('pie1', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: '圖表標題(可省略)'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        // colors: _Color,
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: 'Chrome',
+                y: 61.41,
+                sliced: true,
+                selected: true
+            }, {
+                name: 'Internet Explorer',
+                y: 11.84
+            }, {
+                name: 'Firefox',
+                y: 10.85
+            }, {
+                name: 'Edge',
+                y: 4.67
+            }, {
+                name: 'Safari',
+                y: 4.18
+            }, {
+                name: 'Other',
+                y: 7.05
+            }]
+        }]
     });
     </script>
 </body>
-
-</html>
