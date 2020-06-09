@@ -1,5 +1,14 @@
 // customize js
 $(function() {
+    if ($('.tag').length > 0) {
+        $('.tag').each(function(index, el) {
+            $(this).find('a').off().click(function(e) {
+                $(this).parent().siblings('li').removeClass('active');
+                $(this).parent('li').addClass('active');
+                e.preventDefault();
+            });
+        });
+    }
     var subStatus = false;
     $('.now_edit').find('.btn_change').off().click(function(e) {
         if (!subStatus) {
@@ -312,24 +321,48 @@ $(function() {
             e.preventDefault();
         });
     });
-
 });
-$(function () {
+$(function() {
     $('.mp_widget .counter').each(function() {
-      var $this = $(this),
-      countTo = $this.attr('data-count');
-      $({ countNum: $this.text()}).animate({
-        countNum: countTo
-    },{
-        duration: 5000,
-        easing:'linear',
-        step: function() {
-          $this.text(Math.floor(this.countNum));
-      },
-      complete: function() {
-          $this.text(this.countNum);
-          //alert('finished');
-      }
-  });
-  });
+        var $this = $(this),
+            countTo = $this.attr('data-count');
+        $({ countNum: $this.text() }).animate({
+            countNum: countTo
+        }, {
+            duration: 5000,
+            easing: 'linear',
+            step: function() {
+                $this.text(Math.floor(this.countNum));
+            },
+            complete: function() {
+                $this.text(this.countNum);
+                //alert('finished');
+            }
+        });
+    });
+});
+//tab
+$(function() {
+    // Variables
+    var clickedTab = $(".tab_items > .active");
+    var tabWrapper = $(".tab__content");
+    var activeTab = tabWrapper.find(".active");
+    var activeTabHeight = activeTab.outerHeight();
+    activeTab.show();
+    tabWrapper.height(activeTabHeight);
+    $(".tab_items > button").on("click", function() {
+        $(".tab_items > button").removeClass("active");
+        $(this).addClass("active");
+        clickedTab = $(".tab_items .active");
+        activeTab.fadeOut(100, function() {
+            $(".tab__content > div").removeClass("active");
+            var clickedTabIndex = clickedTab.index();
+            $(".tab__content > div").eq(clickedTabIndex).addClass("active");
+            activeTab = $(".tab__content > .active");
+            activeTabHeight = activeTab.outerHeight();
+            tabWrapper.stop().delay(0).animate({ height: activeTabHeight }, 500, function() {
+                activeTab.delay(50).fadeIn(100);
+            });
+        });
+    });
 });
