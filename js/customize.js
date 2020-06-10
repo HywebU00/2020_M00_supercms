@@ -27,7 +27,7 @@ $(function() {
     });
     $(window).scroll(function() {
         // var HEIGHT = $(window).scrollTop() + $('.title').innerHeight();
-        var HEIGHT = $(window).scrollTop() - $('.title').offset().top + 10;
+        var HEIGHT = Math.floor($(window).scrollTop() - $('.title').offset().top + 10);
         if ($(window).scrollTop() > 100) {
             $(".publish_block").stop().stop().delay(200).animate({ top: HEIGHT }, 400, 'easeOutQuint');
         } else {
@@ -350,6 +350,7 @@ $(function() {
     var activeTabHeight = activeTab.outerHeight();
     activeTab.show();
     tabWrapper.height(activeTabHeight);
+    // 按鈕事件
     $(".tab_items > button").on("click", function() {
         $(".tab_items > button").removeClass("active");
         $(this).addClass("active");
@@ -361,7 +362,7 @@ $(function() {
             activeTab = $(".tab__content > .active");
             activeTabHeight = activeTab.outerHeight();
             tabWrapper.stop().delay(0).animate({ height: activeTabHeight }, 500, function() {
-                activeTab.delay(50).fadeIn(100);
+                activeTab.stop().delay(50).fadeIn(100);
             });
         });
     });
