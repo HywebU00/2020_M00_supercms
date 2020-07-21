@@ -38,3 +38,24 @@
 
 <!-- customize -->
 <script src="js/customize.js"></script>
+<script>
+     //----------------------------------------------------------版頭-----//
+    var dropdownStatus = false;
+    $('.dropdown-btn').each(function(index, el) {
+        $(this).click(function(e) {
+            $(this).siblings('.dropdown-content').toggleClass('show');
+            dropdownStatus = true;
+            $(this).blur();
+            e.preventDefault();
+        });
+    });
+    $(document).mouseup(function(e) {
+        var target = e.target,
+            container = $('.dropdown-content');
+        if ((!container.is(e.target) && container.has(e.target).length === 0) && (!$('.dropdown-btn').is(e.target) || !$('.btn-dropdown').is(e.target))) {
+            if (!(($('.dropdown-btn').is(e.target) || $('.btn-dropdown').is(e.target)) && ($(target).siblings('.show').length > 0))) {
+                container.removeClass('show');
+            }
+        }
+    });
+</script>

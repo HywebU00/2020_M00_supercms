@@ -240,7 +240,7 @@ $(function() {
     var dropdownStatus = false;
     $('.dropdown-btn').each(function(index, el) {
         $(this).click(function(e) {
-            $(this).siblings('.dropdown-content').toggleClass('show');
+            $(this).siblings('.dropdown-content').addClass('show');
             dropdownStatus = true;
             $(this).blur();
             e.preventDefault();
