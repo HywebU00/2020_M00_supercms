@@ -39,8 +39,7 @@
             <div class="grid">
                 <div class="container">
                     <div class="title">
-                        <h2>版型管理
-                            <button class="btn btn-xs" data-fancybox="" data-type="iframe" data-src="fancybox_choose_media.htm"><i class="i_addfile"></i>新增檔案</button></h2>
+                        <h2>版型管理 <button class="btn btn-xs" data-fancybox="" data-type="iframe" data-src="fancybox_choose_media.htm"><i class="i_addfile"></i>選擇範本</button></h2>
                     </div>
                     <!-- flex-12 -->
                     <div class="flex-12">
@@ -49,8 +48,21 @@
                                 <div class="_head">
                                 </div>
                                 <div class="_content edit_block">
-                                    <p>請設定首頁呈現模組</p>
+                                    <div class="notice">
+                                        <p>請設定首頁呈現模組，請建議用1280x900以上解析度操作</p>
+                                    <div class="add_btn_grp">
+                                        <button class="btn btn-xs btn-green"><i class="i_setting"></i>新增模組</button>
+                                         <button class="btn btn-xs btn-green"><i class="i_setting"></i>新增格線欄位</button>
+                                    </div>
+                                    </div>
+
+                                    <!-- header -->
+                                    <div class="template_fixed">
+                                        <img src="images/template_header.svg" alt="">
+                                    </div>
+                                    <div class="divider">以下為可自由拖曳編輯模組區</div>
                                     <div class="drag_area">
+                                        <!-- 以下 row 皆可上下移動 -->
                                         <!-- row -->
                                         <div class="row col-12-full">
                                             <div class="btn_grp">
@@ -558,6 +570,10 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- header -->
+                                    <div class="template_fixed">
+                                        <img src="images/template_footer.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="publish_block">
@@ -566,18 +582,14 @@
                                     <div class="_head">
                                         <h3>檔案狀態</h3>
                                     </div>
-                                    <div class="flex-form">
-                                        <div class="form_grp">
-                                            <div class="form_title">狀態<abbr>*</abbr></div>
-                                            <div class="form_content">
-                                                <div class="radio_grp form_inline">
-                                                    <label><input name="radioStatus" type="radio" value="" checked=""><span>公開</span></label>
-                                                    <label><input name="radioStatus" type="radio" value=""><span>不公開</span></label>
-                                                    <label><input name="radioStatus" type="radio" value=""><span>下架</span></label>
-                                                    <label><input name="radioStatus" type="radio" value=""><span>草稿</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="log">
+                                        <ul>
+                                            <li>
+                                                <span><i class="i_man"></i></span><a href="#">系統管理者(admin)</a>
+                                            </li>
+                                            <li>
+                                                <span><i class="i_clock"></i></span>2019/11/26 14:26:10 </li>
+                                        </ul>
                                     </div>
                                     <div class="btn_grp">
                                         <button class="btn btn-green">暫存</button>
@@ -587,65 +599,14 @@
                                 </div>
                                 <div class="block">
                                     <div class="_head">
-                                        <h3>發佈選項</h3>
+                                        <h3>風格設定</h3>
                                     </div>
-                                    <div class="flex-form">
-                                        <div class="form_grp datepick">
-                                            <div class="form_title">發佈時間<abbr>*</abbr></div>
-                                            <div class="form_content">
-                                                <div class="radio_grp form_inline">
-                                                    <label><input name="radioStartTime" type="radio" value="" checked=""><span>立即</span></label>
-                                                    <label><input name="radioStartTime" type="radio" value=""><span>排程</span></label>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp datepick">
-                                                <div class="labelEffect">
-                                                    <input name="" type="calendar" value="2020/01/01" class="calendar">
-                                                    <button class="btn"><i class="i_calendar"></i></button>
-                                                    <!-- <label>日期選擇</label> -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="form_grp datepick">
-                                            <div class="form_title">下架時間<abbr>*</abbr></div>
-                                            <div class="form_content">
-                                                <div class="radio_grp form_inline">
-                                                    <label><input name="radioEndTime" type="radio" value="" checked=""><span>無</span></label>
-                                                    <label><input name="radioEndTime" type="radio" value=""><span>排程</span></label>
-                                                </div>
-                                            </div>
-                                            <div class="form_grp datepick">
-                                                <div class="labelEffect">
-                                                    <input name="" type="calendar" value="2020/12/31" class="calendar">
-                                                    <button class="btn"><i class="i_calendar"></i></button>
-                                                    <!-- <label>日期選擇</label> -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="form_grp">
-                                            <div class="form_title">另開視窗<abbr>*</abbr></div>
-                                            <div class="form_content">
-                                                <div class="radio_grp form_inline">
-                                                    <label><input name="radioSample" type="radio" value="" checked=""><span>否</span></label>
-                                                    <label><input name="radioSample" type="radio" value=""><span>是</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="form_grp">
-                                            <div class="labelEffect">
-                                                <select id="" name="" class="used">
-                                                    <option value="" selected="" disabled="disabled">請選擇</option>
-                                                    <option value="選項1">選項1</option>
-                                                    <option value="選項2">選項2</option>
-                                                    <option value="選項3">選項3</option>
-                                                    <option value="選項4">選項4</option>
-                                                    <option value="選項5">選項5</option>
-                                                </select>
-                                                <label>下拉選單樣式<abbr>*</abbr></label>
-                                            </div>
+                                    <div class="now_style">
+                                        <a href="#">
+                                            <img src="images/style_01.png" alt="">
+                                        </a>
+                                        <div class="btn_grp">
+                                            <button class="btn btn-primary">選擇風格樣式</button>
                                         </div>
                                     </div>
                                 </div>
