@@ -25,14 +25,25 @@ $(function() {
         subStatus = false;
         e.preventDefault();
     });
-    $(window).scroll(function() {
+    $(window).on('load scroll', function() {
         // var HEIGHT = $(window).scrollTop() + $('.title').innerHeight();
-        var HEIGHT = Math.floor($(window).scrollTop() - $('.title').offset().top + 10);
-        if ($(window).scrollTop() > 100) {
-            $(".publish_block").stop().stop().delay(200).animate({ top: HEIGHT }, 400, 'easeOutQuint');
-        } else {
-            $(".publish_block").stop().stop().delay(200).animate({ top: '0px' }, 400, 'easeOutQuint').removeAttr('style');
+        var windowH = $(window).height(),
+            intDis = Math.floor($('.content_block').offset().top),
+            contentH = windowH - intDis,
+            scrollDis = Math.floor($(window).scrollTop() - $('.title').offset().top + 10);
+            blockHeight = Math.floor($('.publish_block').height());
+        // console.log(windowH+','+scrollDis+','+blockHeight);
+
+        if ($(window).scrollTop()+contentH > blockHeight && blockHeight > contentH) {
+            $(".publish_block").stop().stop().delay(200).animate({ top:$(window).scrollTop() + contentH - blockHeight}, 800, 'easeOutQuint');
+        }else if ($(window).scrollTop()+contentH > blockHeight && blockHeight < contentH &&$(window).scrollTop()>100) {
+             $(".publish_block").stop().stop().delay(200).animate({ top: scrollDis }, 400, 'easeOutQuint');
         }
+        else {
+            $(".publish_block").stop().stop().delay(200).animate({ top:'auto' }, 400, 'easeOutQuint').removeAttr('style');
+        }
+           console.log($(window).scrollTop()+contentH);
+           console.log(blockHeight);
     });
     // password_toggle
     var passShow = false;
