@@ -40,8 +40,6 @@ $(function() {
         } else {
             $(".publish_block").stop().stop().delay(200).animate({ top: 'auto' }, 400, 'easeOutQuint').removeAttr('style');
         }
-        console.log($(window).scrollTop() + contentH);
-        console.log(blockHeight);
     });
     // password_toggle
     var passShow = false;
@@ -375,4 +373,20 @@ $(function() {
             });
         });
     });
+    if ($('.right_sidebar').length > 0) {
+        $('.btn-module-choose').off().click(function(e) {
+            $('.right_sidebar').removeClass('show');
+            $('.template_choose').addClass('show');
+            e.preventDefault();
+        });
+        $('.btn-grid-choose').off().click(function(e) {
+            $('.right_sidebar').removeClass('show');
+            $('.grid_choose').addClass('show');
+            e.preventDefault();
+        });
+        $('.right_sidebar').find('._head a.close').off().click(function(e) {
+            $(this).parents('.right_sidebar').removeClass('show');
+            e.preventDefault();
+        });
+    }
 });

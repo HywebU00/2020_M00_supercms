@@ -51,9 +51,9 @@
                                     <div class="notice">
                                         <p>請設定首頁呈現模組，請建議用1280x900以上解析度操作</p>
                                         <div class="add_btn_grp">
-                                            <button class="btn btn-xs"><i class="i_addfile"></i>選擇範本</button>
-                                            <button class="btn btn-xs"><i class="i_setting"></i>新增模組</button>
-                                            <button class="btn btn-xs"><i class="i_setting"></i>新增格線欄位</button>
+                                            <button class="btn btn-xs btn-template-choose"><i class="i_addfile"></i>套用範本</button>
+                                            <button class="btn btn-xs btn-module-choose"><i class="i_setting"></i>新增模組</button>
+                                            <button class="btn btn-grid-choose btn-xs"><i class="i_setting"></i>新增格線欄位</button>
                                         </div>
                                     </div>
                                     <!-- header -->
@@ -94,6 +94,10 @@
                                                             </ul>
                                                         </div>
                                                     </div>
+                                                    <!-- 拉過來後只顯示圖片 -->
+                                                    <div class="template_is">
+                                                        <img src="images/template/banner_slide.svg" alt="">
+                                                    </div>
                                                     <div class="btn_grp">
                                                         <button type="button" class="btn btn-green"><i class="i_move invert"></i>移動</button>
                                                         <button type="button" class="btn btn-red"><i class="i_trash invert"></i>刪除</button>
@@ -131,6 +135,10 @@
                                                                 </li>
                                                             </ul>
                                                         </div>
+                                                    </div>
+                                                    <!-- 拉過來後只顯示圖片 -->
+                                                    <div class="template_is">
+                                                        <img src="images/template/news.svg" alt="">
                                                     </div>
                                                     <div class="btn_grp">
                                                         <button type="button" class="btn btn-green"><i class="i_move invert"></i>移動</button>
@@ -170,6 +178,10 @@
                                                             </ul>
                                                         </div>
                                                     </div>
+                                                    <!-- 拉過來後只顯示圖片 -->
+                                                    <div class="template_is">
+                                                        <img src="images/template/video_left.svg" alt="">
+                                                    </div>
                                                     <div class="btn_grp">
                                                         <button type="button" class="btn btn-green"><i class="i_move invert"></i>移動</button>
                                                         <button type="button" class="btn btn-red"><i class="i_trash invert"></i>刪除</button>
@@ -199,6 +211,10 @@
                                                                 </li>
                                                             </ul>
                                                         </div>
+                                                    </div>
+                                                    <!-- 拉過來後只顯示圖片 -->
+                                                    <div class="template_is">
+                                                        <img src="images/template/tab.svg" alt="">
                                                     </div>
                                                     <div class="btn_grp">
                                                         <button type="button" class="btn btn-green"><i class="i_move invert"></i>移動</button>
@@ -238,6 +254,10 @@
                                                             </ul>
                                                         </div>
                                                     </div>
+                                                    <!-- 拉過來後只顯示圖片 -->
+                                                    <div class="template_is">
+                                                        <img src="images/template/block_link.svg" alt="">
+                                                    </div>
                                                     <div class="btn_grp">
                                                         <button type="button" class="btn btn-green"><i class="i_move invert"></i>移動</button>
                                                         <button type="button" class="btn btn-red"><i class="i_trash invert"></i>刪除</button>
@@ -267,6 +287,10 @@
                                                                 </li>
                                                             </ul>
                                                         </div>
+                                                    </div>
+                                                    <!-- 拉過來後只顯示圖片 -->
+                                                    <div class="template_is">
+                                                        <img src="images/template/adword_banner.svg" alt="">
                                                     </div>
                                                     <div class="btn_grp">
                                                         <button type="button" class="btn btn-green"><i class="i_move invert"></i>移動</button>
@@ -599,6 +623,16 @@
                                 </div>
                                 <div class="block">
                                     <div class="_head">
+                                        <h3>內容設定</h3>
+                                    </div>
+                                    <div class="add_btn_grp">
+                                        <button class="btn btn-xs btn-template-choose"><i class="i_addfile"></i>套用範本</button>
+                                        <button class="btn btn-xs btn-module-choose"><i class="i_setting"></i>新增模組</button>
+                                        <button class="btn btn-grid-choose btn-xs"><i class="i_setting"></i>新增格線欄位</button>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="_head">
                                         <h3>風格設定</h3>
                                     </div>
                                     <div class="now_style">
@@ -612,6 +646,92 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 選擇模組右邊抽屜 -->
+            <div class="right_sidebar template_choose">
+                <div class="_head">
+                    <h3>請拖曳模組到左側欄位：</h3>
+                    <a href="#" class="close"><i class="i_close"></i><span>關閉視窗</span></a>
+                </div>
+                <div class="_content">
+                    <div class="item">
+                        <img src="images/template/banner_slide.svg" alt="">
+                        <span>形象圖輪播</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/template/banner_info.svg" alt="">
+                        <span>形象圖輪播+服務資訊</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/template/marquee.svg" alt="">
+                        <span>跑馬燈</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/template/news.svg" alt="">
+                        <span>訊息公告</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/template/tab.svg" alt="">
+                        <span>訊息公告+頁籤</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/template/block_link.svg" alt="">
+                        <span>常用服務+方形圖文</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/template/circle_link.svg" alt="">
+                        <span>常用服務+圓形圖文</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/template/adpic_banner.svg" alt="">
+                        <span>廣告輪播-圖片</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/template/adword_banner.svg" alt="">
+                        <span>廣告輪播-文字</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/template/free.svg" alt="">
+                        <span>自由編輯區</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 選擇格線右邊抽屜 -->
+            <div class="right_sidebar grid_choose">
+                <div class="_head">
+                    <h3>請拖曳欄位到左側：</h3>
+                    <a href="#" class="close"><i class="i_close"></i><span>關閉視窗</span></a>
+                </div>
+                <div class="_content">
+                    <div class="item">
+                        <img src="images/grid/col-12-full.svg" alt="">
+                        <span>單欄滿版</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/grid/col-12.svg" alt="">
+                        <span>單欄</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/grid/col-6-6.svg" alt="">
+                        <span>雙欄均分</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/grid/col-8-4.svg" alt="">
+                        <span>雙欄 左大右小</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/grid/col-4-8.svg" alt="">
+                        <span>雙欄 右大左小</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/grid/col-4-4-4.svg" alt="">
+                        <span>三欄均分</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/grid/col-3-3-3-3.svg" alt="">
+                        <span>四欄均分</span>
                     </div>
                 </div>
             </div>
