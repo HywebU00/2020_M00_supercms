@@ -138,7 +138,7 @@ aside {
         box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.1);
         top: 0;
         left: 0;
-        width: 100%;
+        width: inherit;
         z-index: 9;
         @include screen('tablet') {
             background: darken($menuColor, 20);
@@ -151,7 +151,7 @@ aside {
         padding: 0 .15em .3em;
         color: #FFF;
         left: 0;
-        width: 100%;
+        width: inherit;
         font-size: .75em;
         height: 2em;
         text-align: center;

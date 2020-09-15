@@ -286,6 +286,10 @@ select::-ms-expand {
         .startDate, .endDate {
             flex: 0 1 calc(50% - 1em);
             position: relative;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: calc(50% - 1em);
+            max-width:calc(50% - 1em);
         }
         .endDate {
             margin-left: 2em;
