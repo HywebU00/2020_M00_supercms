@@ -1733,7 +1733,8 @@ table {
     flex: 1 1 calc(100% - 350px);
     flex-grow:1;
     flex-shrink: 1;
-    max-width:100%;
+    flex-basis:calc(100% - 350px);
+    width:100%;
     .item {
         margin: 2px;
         position: relative;
