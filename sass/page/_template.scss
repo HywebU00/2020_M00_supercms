@@ -1690,6 +1690,9 @@ table {
                 margin-right: 1em;
                 @include aspect-ratio(1, 1);
                 width: 30px;
+                flex-grow: 0;
+                flex-basis:30px;
+                flex-shrink: 0;
                 img {
                     object-fit: contain;
                 }
