@@ -79,7 +79,7 @@ select::-ms-expand {
             &~label {
                 bottom: 0;
                 font-size: .813em;
-                color: #BBB;
+                color: darken($primaryColor,10);
                 padding: 0;
                 pointer-events: none;
                 height: calc(100% + 1.95em);
