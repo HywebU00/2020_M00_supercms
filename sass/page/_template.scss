@@ -1602,6 +1602,108 @@ table {
         background: darken($color-blue, 10);
     }
 }
+.attachment_list {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 calc(100% - 350px);
+    flex-basis: calc(100% - 350px);
+    .item {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        border-bottom: 1px dashed #DDD;
+        align-items: center;
+        &:hover{
+            .num{
+                color:$aHover;
+            }
+            .form_grp{
+                input{
+                    color:$aHover;
+                }
+            }
+        }
+        .num {
+            flex-basis: 1em;
+            margin-right: .5em;
+            color:#888;
+        }
+        .check_grp {
+            flex-basis: 1.5em;
+            margin-right: 1em;
+            label {
+                margin: 0;
+            }
+        }
+        a {
+            flex-basis: 30px;
+            margin-right: 1em;
+            .img-container {
+                background: none;
+                @include aspect-ratio(1, 1);
+                width: 100%;
+                img {
+                    object-fit: contain;
+                }
+            }
+        }
+        .form_grp {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+            input {
+                background: none;
+                pointer-events: none;
+                cursor: arrow;
+                color:#555;
+            }
+        }
+        .btn_grp {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 50px;
+            &>.btn {
+                padding: 0;
+                width: 2.5em;
+                height: 2.5em;
+                border-radius: 50%;
+                min-width: 2em;
+                background: #FFF;
+                position: relative;
+                border: 1px solid #DDD;
+                &:hover, &:focus {
+                    border: 1px solid $form-focus;
+                    background: #FFF;
+                    box-shadow: none;
+                    background: $form-focus;
+                    &:before {
+                        border: 2px solid #FFF;
+                        border-left: none;
+                        border-top: none;
+                    }
+                    i {
+                        filter: invert(100%);
+                        span {
+                            filter: invert(100%);
+                        }
+                    }
+                    span {
+                        filter: invert(100%);
+                    }
+                }
+            }
+            &>.btn-delete {
+                &:hover, &:focus {
+                    color: #FFF;
+                    background: $color-red;
+                    border: 1px solid $color-red;
+                }
+            }
+        }
+    }
+}
 .photo_list {
     min-height: 400px;
     padding: .5em;
@@ -1618,6 +1720,7 @@ table {
         padding: 4px;
         background: #FFF;
         flex: 0 1 calc(12.5% - 4px);
+        flex-basis: calc(12.5% - 4px);
         @media screen and (min-width: '1600px') {
             flex: 0 1 calc(10% - 4px);
         }
@@ -1950,7 +2053,7 @@ table {
                 font-weight: normal;
                 font-size: .813rem;
                 color: #333;
-                width:auto;
+                width: auto;
                 i {
                     font-size: .938rem;
                     opacity: .5;
