@@ -661,10 +661,13 @@ body {
             border-bottom: 1px solid #AAA;
         }
         .quick_btn {
-            flex: 0 1 6em;
+            flex: 1 1 6em;
+            flex-grow:1;
+            flex-shrink: 1;
+            flex-basis: 6em;
             text-align: right;
             justify-content: flex-end;
-            margin: 0 0 0 auto;
+            margin: 0 0 0 1em;
             align-items: center;
             @include screen('mobile') {
                 margin: 0 0 .5em auto;
@@ -1730,7 +1733,7 @@ table {
     flex: 1 1 calc(100% - 350px);
     flex-grow:1;
     flex-shrink: 1;
-    max-width:calc(100% - 350px);
+    max-width:100%;
     .item {
         margin: 2px;
         position: relative;
