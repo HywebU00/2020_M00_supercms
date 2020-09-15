@@ -27,12 +27,14 @@ select::-ms-expand {
 //     }
 // }
 .labelEffect {
+	margin-left: 1%;
     &+.labelEffect{
-        margin-left:4%;
-        @include screen('mobile') {
+
+
+    }
+    @include screen('mobile') {
             margin-left:0;
         }
-    }
     &.password_toggle,&.hasBtn{
         input[type="text"],input[type="password"]{
             padding-right: 3em;
@@ -131,10 +133,46 @@ select::-ms-expand {
         font-size: .875rem;
         color: #666;
         padding: 0 .5em;
-        align-self: flex-end;
+        display:flex;
+        align-items:center;
+        img{
+        	max-height:3em;
+        }
         label {
             input {
                 flex: 0 1 1.2em !important;
+            }
+        }
+        .btn_circle{
+        	padding: 0;
+            width: 2.5em;
+            height: 2.5em;
+            border-radius: 50%;
+            min-width: 2.5em;
+            background: #FFF;
+            position: relative;
+            border: 1px solid #DDD;
+            &:hover, &:focus {
+                border: 1px solid $form-focus;
+                background: #FFF;
+                box-shadow: none;
+                background: $form-focus;
+                &:before {
+                    border: 2px solid #FFF;
+                    border-left: none;
+                    border-top: none;
+
+                }
+                i {
+
+                    filter: invert(100%);
+                    span{
+                    filter: invert(100%);
+                }
+                }
+                span{
+                    filter: invert(100%);
+                }
             }
         }
     }
@@ -301,7 +339,7 @@ select::-ms-expand {
             border-bottom: none;
             .labelEffect {
                 flex: 1 1 auto;
-                margin-right: .5em;
+                margin-right: 1%;
                 align-self: center;
                 margin-bottom: .2em;
                 &:before, &:after {
