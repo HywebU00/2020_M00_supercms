@@ -642,6 +642,16 @@ body {
                 }
             }
         }
+        .data-title{
+            margin-top: 1.5em !important;
+            input[type="text"]{
+                background:lighten($color-yellow,40);
+                font-weight:600;
+            }
+            .labelEffect{
+                margin-left: 0 !important;
+            }
+        }
         .flex-form {
             margin: 0;
             font-size: .875rem;
@@ -874,7 +884,7 @@ body {
             flex-flow: row wrap;
             button {
                 flex: 1 1 45%;
-                padding: .25em;
+                padding: .45em .25em;
             }
         }
     }
