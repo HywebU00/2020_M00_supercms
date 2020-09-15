@@ -148,6 +148,7 @@ body {
     padding-top: 5em;
     margin-left: 17em;
     margin-right: 1em;
+    position: relative;
     transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
     // max-width: 90em;
     &.full {
@@ -162,6 +163,28 @@ body {
         &.full {
             margin-left: 1em;
         }
+    }
+}
+.btn-back {
+    margin-left: 1em;
+    border: 1px solid $secondaryColor;
+    border-bottom: 2px solid $secondaryColor;
+    background: $secondaryColor;
+    padding-left: .2em;
+    padding-right: .6em;
+    font-weight: normal;
+    font-size: .75rem;
+    color: #FFF;
+    position: absolute;
+    top:70px;
+    right: 1rem;
+    i {
+        font-size: .938rem;
+        // opacity: .5;
+        filter: invert(100%);
+    }
+    .ink {
+        display: none;
     }
 }
 .grid {
@@ -585,8 +608,8 @@ body {
                 flex: 1 1 100%;
                 padding: 0;
             }
-            .check_grp{
-                label{
+            .check_grp {
+                label {
                     margin-bottom: 0;
                     margin-top: auto;
                 }
@@ -662,7 +685,7 @@ body {
         }
         .quick_btn {
             flex: 1 1 6em;
-            flex-grow:1;
+            flex-grow: 1;
             flex-shrink: 1;
             flex-basis: 6em;
             text-align: right;
@@ -1246,10 +1269,10 @@ table {
     flex-flow: row wrap;
     .item {
         flex: 0 1 calc(25% - 1em);
-        flex-grow:0;
+        flex-grow: 0;
         flex-shrink: 1;
         flex-basis: calc(25% - 1em);
-        max-width:calc(25% - 1em);
+        max-width: calc(25% - 1em);
         margin: 0 .5em 1em;
         background: #FFF;
         box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, .3);
@@ -1262,19 +1285,19 @@ table {
         transition: .3s ease-out;
         @media screen and (min-width: 1600px) {
             flex: 0 1 calc(20% - 1em);
-            max-width:calc(20% - 1em);
+            max-width: calc(20% - 1em);
         }
         @include screen('notebook') {
             flex: 0 1 calc(33.33% - 1em);
-            max-width:calc(33.33% - 1em);
+            max-width: calc(33.33% - 1em);
         }
         @include screen('mobile') {
             flex: 0 1 calc(50% - 1em);
-            max-width:calc(50% - 1em);
+            max-width: calc(50% - 1em);
         }
         @include screen('xs_mobile') {
             flex: 0 1 calc(100% - 1em);
-            max-width:calc(100% - 1em);
+            max-width: calc(100% - 1em);
         }
         &:hover {
             box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, .5);
@@ -1656,11 +1679,17 @@ table {
         }
         a {
             flex-basis: 30px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
             margin-right: 1em;
+            display:flex;
+            align-items: center;
             .img-container {
                 background: none;
+                margin-right: 1em;
                 @include aspect-ratio(1, 1);
-                width: 100%;
+                width: 30px;
                 img {
                     object-fit: contain;
                 }
@@ -1731,10 +1760,10 @@ table {
     background: #F2F2F2;
     position: relative;
     flex: 1 1 calc(100% - 350px);
-    flex-grow:1;
+    flex-grow: 1;
     flex-shrink: 1;
-    flex-basis:calc(100% - 350px);
-    width:100%;
+    flex-basis: calc(100% - 350px);
+    width: 100%;
     .item {
         margin: 2px;
         position: relative;
@@ -1789,7 +1818,7 @@ table {
         a {
             display: block;
             &:hover, &:focus {
-                span{
+                span {
                     color: $aHover;
                 }
             }
@@ -1843,7 +1872,7 @@ table {
             left: 0;
             z-index: 9;
             display: none;
-            padding:.75em 0 0 .75em;
+            padding: .75em 0 0 .75em;
             &.show {
                 display: block;
                 &~a {
