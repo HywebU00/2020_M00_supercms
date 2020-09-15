@@ -152,6 +152,7 @@ select::-ms-expand {
             background: #FFF;
             position: relative;
             border: 1px solid #DDD;
+
             &:hover, &:focus {
                 border: 1px solid $form-focus;
                 background: #FFF;

@@ -75,9 +75,14 @@
                                                         <label><input name="" type="checkbox" value=""><span>影片</span></label>
                                                         <label><input name="" type="checkbox" value=""><span>檔案</span></label>
                                                     </div>
+
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="btn_grp">
+                                                        <button type="button" class="btn">格狀顯示<i class="i_grid"></i></button>
+                                                        <button type="button" class="btn">列表顯示<i class="i_list"></i></button>
+                                                    </div>
                                         <div class="btn_grp">
                                             <a href="#" class="btn btn-xs">檔名<i class="i_sort"></i></a>
                                             <a href="#" class="btn btn-xs">檔案大小<i class="i_sort"></i></a>
@@ -168,40 +173,39 @@
                                                 </div>
                                                 <div class="widget">
                                                     <button class="btn btn-xs btn-green toggleOpen">展開所有分類</button>
-                                                <ul>
-                                                    <li>
-                                                        <a href="#"><i class="i_folder_color"></i><span>分類1</span></a>
-                                                        <ul>
-                                                            <li><a href="#"><span>分類1-1</span></a></li>
-                                                            <li><a href="#"><span>分類1-2</span></a></li>
-                                                            <li><a href="#"><span>分類1-3</span></a></li>
-                                                            <li><a href="#"><span>分類1-4</span></a></li>
-                                                            <li><a href="#"><span>分類1-5</span></a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><i class="i_folder_color"></i><span>分類2</span></a>
-                                                        <ul>
-                                                            <li><a href="#"><span>分類2-1</span></a></li>
-                                                            <li><a href="#"><span>分類2-2</span></a></li>
-                                                            <li><a href="#"><span>分類2-3</span></a></li>
-                                                            <li><a href="#"><span>分類2-4</span></a></li>
-                                                            <li><a href="#"><span>分類2-5</span></a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><i class="i_folder_color"></i><span>分類3</span></a>
-                                                        <ul>
-                                                            <li><a href="#"><span>分類3-1</span></a></li>
-                                                            <li><a href="#"><span>分類3-2</span></a></li>
-                                                            <li><a href="#"><span>分類3-3</span></a></li>
-                                                            <li><a href="#"><span>分類3-4</span></a></li>
-                                                            <li><a href="#"><span>分類3-5</span></a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#"><i class="i_folder_color"></i><span>分類1</span></a>
+                                                            <ul>
+                                                                <li><a href="#"><span>分類1-1</span></a></li>
+                                                                <li><a href="#"><span>分類1-2</span></a></li>
+                                                                <li><a href="#"><span>分類1-3</span></a></li>
+                                                                <li><a href="#"><span>分類1-4</span></a></li>
+                                                                <li><a href="#"><span>分類1-5</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="i_folder_color"></i><span>分類2</span></a>
+                                                            <ul>
+                                                                <li><a href="#"><span>分類2-1</span></a></li>
+                                                                <li><a href="#"><span>分類2-2</span></a></li>
+                                                                <li><a href="#"><span>分類2-3</span></a></li>
+                                                                <li><a href="#"><span>分類2-4</span></a></li>
+                                                                <li><a href="#"><span>分類2-5</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="i_folder_color"></i><span>分類3</span></a>
+                                                            <ul>
+                                                                <li><a href="#"><span>分類3-1</span></a></li>
+                                                                <li><a href="#"><span>分類3-2</span></a></li>
+                                                                <li><a href="#"><span>分類3-3</span></a></li>
+                                                                <li><a href="#"><span>分類3-4</span></a></li>
+                                                                <li><a href="#"><span>分類3-5</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-
                                             </div>
                                             <div class="widget_block">
                                                 <div class="_head">
@@ -236,10 +240,11 @@
                                                         <input name="" type="checkbox" value="">
                                                     </label>
                                                 </div>
+                                                <div class="img-container">
+                                                    <img src="images/demo/01.jpg" alt="" class="cover">
+                                                </div>
                                                 <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
-                                                    <div class="img-container">
-                                                        <img src="images/demo/01.jpg" alt="" class="cover">
-                                                    </div>
+                                                    <span>檔案名稱檔案名稱檔案名稱檔案名稱檔案名稱</span>
                                                 </a>
                                             </div>
                                             <div class="item">
@@ -249,10 +254,12 @@
                                                         <input name="" type="checkbox" value="">
                                                     </label>
                                                 </div>
-                                                <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+
                                                     <div class="img-container">
                                                         <img src="images/demo/02.jpg" alt="" class="cover">
                                                     </div>
+                                                    <a data-fancybox data-type="iframe" data-src="fancybox_media_edit.htm" href="javascript:;">
+                                                         <span>檔案名稱檔案名稱檔案名稱檔案名稱檔案名稱</span>
                                                 </a>
                                             </div>
                                             <div class="item">
