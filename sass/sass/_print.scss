@@ -12,6 +12,12 @@
     .publish_block {
         display: none;
     }
+    .noPrint {
+        display: none;
+    }
+    .forPrint {
+        display: block;
+    }
     /* -------------------------------各別顯示設定----//*/
     body {
         background: transparent;
@@ -34,10 +40,10 @@
     .cp {
         @include gutter(0);
     }
-    input[type="text"],input[type="password"],input[type="tel"],input[type="mail"],input[type="number"],input[type="date"],input[type="calendar"],textarea,select {
+    input[type="text"], input[type="password"], input[type="tel"], input[type="mail"], input[type="number"], input[type="date"], input[type="calendar"], textarea, select {
         border-bottom: 1px solid #999 !important;
     }
-    select{
+    select {
         background: url(../images/basic/icon_select_arrow.svg) no-repeat right center transparent !important;
         background-size: 10px;
     }
