@@ -42,10 +42,23 @@
     }
     input[type="text"], input[type="password"], input[type="tel"], input[type="mail"], input[type="number"], input[type="date"], input[type="calendar"], textarea, select {
         border-bottom: 1px solid #999 !important;
+        font-size: 14pt !important;
+        border-radius: 0px !important;
+        padding:.25em .75em;
+    }
+    .labelEffect input:focus ~ label, .labelEffect input.used ~ label, .labelEffect textarea:focus ~ label, .labelEffect textarea.used ~ label, .labelEffect select:focus ~ label, .labelEffect select.used ~ label{
+        color:#666 !important;
     }
     select {
         background: url(../images/basic/icon_select_arrow.svg) no-repeat right center transparent !important;
-        background-size: 10px;
+        background-size: 20px !important;
+        padding-right: 20px !important;
+    }
+    .help{
+        color:#AAA !important;
+    }
+    .flex-form .form_content.form_inline .labelEffect{
+        align-self: flex-end !important;
     }
     // .innerpage {
     //     margin-top: 0 !important;
@@ -171,4 +184,19 @@
     //         }
     //     }
     // }
+    // 表單一定要加入
+    input[type="checkbox"]:checked,
+    input[type="radio"]:checked {
+        border: $form-btn solid 5px !important;
+        background-color: #FFF !important;
+        outline: none !important;
+    }
+    input[type="checkbox"]:checked {
+        background-image: url(../images/basic/icon_checked.svg) !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: 98% !important;
+        box-shadow: $form-btn 0 0 0 2px !important;
+        @include border-radius(2px);
+    }
 }
