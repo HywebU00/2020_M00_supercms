@@ -198,10 +198,12 @@
         outline: none !important;
     }
     input[type="checkbox"]:checked {
+        background-color:$form-btn !important;
         background-image: url(../images/basic/icon_checked.svg) !important;
         background-repeat: no-repeat !important;
         background-position: center center !important;
-        background-size: 98% !important;
+        background-size: 120% !important;
+         border: $form-btn solid 2px !important;
         box-shadow: $form-btn 0 0 0 2px !important;
         @include border-radius(2px);
     }
