@@ -47,7 +47,8 @@
         padding:.25em .75em;
     }
     .labelEffect input:focus ~ label, .labelEffect input.used ~ label, .labelEffect textarea:focus ~ label, .labelEffect textarea.used ~ label, .labelEffect select:focus ~ label, .labelEffect select.used ~ label{
-        color:#666 !important;
+        color:#333 !important;
+        font-size: 8pt !important;
     }
     select {
         background: url(../images/basic/icon_select_arrow.svg) no-repeat right center transparent !important;
