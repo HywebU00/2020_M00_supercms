@@ -141,6 +141,7 @@ select::-ms-expand {
         label {
             input {
                 flex: 0 1 1.2em !important;
+                margin-top:0;
             }
         }
         .btn_circle{
@@ -490,6 +491,8 @@ form, div {
         label {
             position: relative;
             margin-bottom: .5em;
+            display:flex;
+            align-items: flex-start;
             input {
                 position: relative;
                 z-index: 1;
@@ -503,7 +506,7 @@ form, div {
                         border-radius: 50%;
                         background: lighten($form-focus, 10);
                         content: "";
-                        left: .05em;
+                        left: 0em;
                         top: .3em;
                         z-index: 0;
                         animation: ripple 0.35s linear;
@@ -517,7 +520,7 @@ form, div {
                 flex: 0 1 auto;
                 margin-right: 1em;
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
             }
         }
     }
@@ -708,12 +711,15 @@ input[type="reset"] {
 //---------------------------------------------checkbox & radio--------//
 input[type="checkbox"],
 input[type="radio"] {
-    margin: 0px .45em 0 0;
+    margin: .25em .45em 0 0;
     width: 1.2em;
     height: 1.2em;
     background-color: #f7f6ee;
     border: 2px solid $color-gray;
     transition: none;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 1.2em;
     &:focus {
         box-shadow: none;
     }
