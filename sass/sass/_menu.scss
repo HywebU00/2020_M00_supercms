@@ -223,11 +223,16 @@ aside {
                         &:after {
                             display: none;
                         }
+                        @include screen('tablet') {
+                            &:after {
+                                display: block;
+                            }
+                        }
                     }
                 }
-                ul {
-                    display: none !important;
-                }
+                // ul {
+                //     display: none !important;                 
+                // }
             }
         }
         @include screen('tablet') {
@@ -241,6 +246,16 @@ aside {
                             display: block;
                         }
                     }
+                }
+            }
+        }
+    }
+    &.hidden.Pc{
+        nav {
+           
+            &>ul {
+                ul {
+                    display: none !important;                 
                 }
             }
         }
