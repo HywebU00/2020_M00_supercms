@@ -530,7 +530,7 @@ h1.title, h2.title {
                 bottom: -1em;
                 background: #F1F1F1;
                 padding: .25em;
-                border-radius: $border-radius/2;
+                border-radius: calc($border-radius / 2);
                 z-index: 9;
                 display: none;
                 opacity: 0;

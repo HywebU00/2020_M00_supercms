@@ -10,7 +10,7 @@
     &:before {
         display: inline-block;
         content: "";
-        padding-top: ($height / $width) * 100%;
+        padding-top: calc($height / $width) * 100%;
     }
     img {
         display: block;
