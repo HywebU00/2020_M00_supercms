@@ -8,6 +8,10 @@ $btn-radius: 4px;
 .btn_grp {
     text-align: center;
     padding: 0.3em 0;
+    &._center{
+        width: 100%;
+        justify-content: center;
+    }
 }
 // 按鈕的共用設定
 @mixin btn_setting($btn-bg: #eee, $btn-font-color: $btn-font-color) {

@@ -27,72 +27,70 @@ select::-ms-expand {
 //     }
 // }
 .labelEffect {
-	margin-left: 1%;
-    &+.labelEffect{
-
-
-    }
+	// margin-left: 1%;
+    &+.labelEffect{}
     @include screen('mobile') {
-            margin-left:0;
-        }
+        margin-left:0;
+    }
     &.password_toggle,&.hasBtn{
         input[type="text"],input[type="password"]{
-            padding-right: 3em;
+            // padding-right: 3em;
             letter-spacing: .1em;
         }
     }
     display: flex;
-    flex: 1 1 46%;
-    position: relative;
+    flex: 1 1 100%;
+    flex-direction: column;
+    // position: relative;
     margin-bottom: .2em;
     // border-bottom: 1px solid #DEDEDE;
     // padding-bottom: .2em;
     &>label {
         width: 100%;
-        color: #666;
+        color: #222;
         align-items: flex-start;
         font-size: 1em;
-        font-weight: normal;
-        position: absolute;
-        pointer-events: none;
-        left: 0px;
-        bottom: 0;
-        height: 100%;
-        padding: .6em .5em .1em;
+        font-weight: bold;
+        // position: absolute;
+        // pointer-events: none;
+        // left: 0px;
+        // bottom: 0;
+        // height: 100%;
+        padding: .6em 0;
         transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-        &:before, &:after {
-            content: "";
-            display: block;
-            width: 0%;
-            left: 50%;
-            position: absolute;
-            bottom: -2px;
-            height: 2px;
-            background: lighten($form-focus, 0);
-            transition: 0.2s ease all;
-        }
+        // &:before, &:after {
+        //     content: "";
+        //     display: block;
+        //     width: 0%;
+        //     left: 50%;
+        //     position: absolute;
+        //     bottom: -2px;
+        //     height: 2px;
+        //     background: lighten($form-focus, 0);
+        //     transition: 0.2s ease all;
+        // }
     }
     input, textarea, select {
         flex: 1 1 70%;
         border-radius:.2em;
-        &:focus, &.used {
-            &~label {
-                bottom: 0;
-                font-size: .813em;
-                color: darken($primaryColor,10);
-                padding: 0;
-                pointer-events: none;
-                height: calc(100% + 1.95em);
-                &:before {
-                    width: 50%;
-                    left: 0%;
-                }
-                &:after {
-                    width: 50%;
-                    right: 50%;
-                }
-            }
-        }
+        // &:focus, &.used {
+        //     &~label {
+        //         bottom: 0;
+        //         font-size: .813em;
+        //         color: darken($primaryColor,10);
+        //         padding: 0;
+        //         pointer-events: none;
+        //         height: calc(100% + 1.95em);
+        //         &:before {
+        //             width: 50%;
+        //             left: 0%;
+        //         }
+        //         &:after {
+        //             width: 50%;
+        //             right: 50%;
+        //         }
+        //     }
+        // }
         &.used {
             &~label {
                 &:before {
@@ -107,11 +105,14 @@ select::-ms-expand {
         }
     }
     [class^="btn"], .additonal {
-        flex: 0 1 10%;
+        // flex: 0 1 10%;
         min-width: 0em;
-        margin: 0em 0 0 .5em;
-        padding: .2em .25em;
+        // margin: 0 0 0 .5em;
+        margin: 0;
+        padding: .2em 1em;
         font-size: .938em;
+
+        height: 48px;
     }
     .btn-icon {
         flex: 0 1 3em;
@@ -122,21 +123,24 @@ select::-ms-expand {
         padding: .2em .25em;
         font-size: .938em;
         position:absolute;
-        right:.5em;
-        top:.35em;
+        // right:.5em;
+        // top:.35em;
+
+        right: 2px;
         i {
             font-size: 1.25em;
         }
     }
     .additional {
         white-space: nowrap;
-        font-size: .875rem;
-        color: #666;
-        padding: 0 .5em;
+        // font-size: .875rem;
+        // color: #666;
+        padding: .5em 0;
         display:flex;
+        gap: 16px;
         align-items:center;
         img{
-        	max-height:3em;
+            max-height:3em;
         }
         label {
             input {
@@ -145,7 +149,7 @@ select::-ms-expand {
             }
         }
         .btn_circle{
-        	padding: 0;
+            padding: 0;
             width: 2.5em;
             height: 2.5em;
             border-radius: 50%;
@@ -186,7 +190,7 @@ select::-ms-expand {
             flex: 1 1 50%;
         }
     }
-    font-size: .938em;
+    // font-size: .938em;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -197,27 +201,47 @@ select::-ms-expand {
         min-width: 1em;
     }
     .form_grp {
-        flex: 0 1 100%;
+        // flex: 0 1 100%;
         flex: 0 1 calc(100% - 0em);
         display: flex;
         flex-flow: row wrap;
+        gap: 10px;
         padding: 0em;
-        margin-bottom: 1.5em;
-        align-items: center;
-        align-content: flex-start;
+        // margin-bottom: 1.5em;
+        margin: .25em 0;
+        // align-items: flex-start;
+        // align-items: center;
+        align-items: flex-start;
         position: relative;
         @include screen('mobile') {
             flex-basis: 100%;
         }
+        &._titleAlignCenter{
+            .form_title{
+                background: pink;;
+            }
+            &:has(.form_content input) .form_title,
+            &:has(.form_content select) .form_title {
+                padding: 1em 0;
+            }
+            &:has(.form_content input[type="checkbox"]) .form_title{
+                padding: 0;
+            }
+        }
+        .labelEffect{
+            flex: 1 1 auto;
+        }
         .help {
-            font-size: .813em;
-            color: #888;
+            font-size: .9em;
+            color: #333;
             text-align: right;
             margin-left: auto;
-            padding: 0 .5em;
-            position: absolute;
-            bottom: -1.75em;
-            right: 0;
+            padding: .35em 0;
+            // position: absolute;
+            // bottom: -1.75em;
+            // right: 0;
+            display: block;
+            width: 100%;
         }
         &.error {
             input {
@@ -246,12 +270,24 @@ select::-ms-expand {
                     }
                 }
             }
+            input[type="text"],
+            input[type="reset"],
+            input[type="file"],
+            input[type="tel"],
+            input[type="password"],
+            input[type="date"],
+            textarea,
+            select {
+                box-shadow: 0 0 0 2px $color-red;
+                outline: none;
+            }
         }
     }
     // 日期選擇
     .datepick {
         display: flex;
         flex: 0 1 100%;
+        gap: 0;
         flex-flow: row wrap;
         position: relative;
         .help {
@@ -259,7 +295,7 @@ select::-ms-expand {
         }
         input.calendar {
             width: 100%;
-            padding-right: 2em;
+            // padding-right: 2em;
         }
         .btn {
             position: absolute;
@@ -298,7 +334,7 @@ select::-ms-expand {
                 position: absolute;
                 content: "~";
                 left: -1em;
-                top: .4em;
+                top: 55px;
                 font-size: 1.125rem;
             }
         }
@@ -321,11 +357,12 @@ select::-ms-expand {
         }
     }
     .form_title {
-        position: absolute;
-        font-size: .75rem;
-        color: #999;
-        top: -1.75em;
-        left: 0em;
+        font-weight: bold;
+        // position: absolute;
+        // font-size: .75rem;
+        // color: #999;
+        // top: -1.75em;
+        // left: 0em;
     }
     .form_content {
         display: flex;
@@ -340,12 +377,13 @@ select::-ms-expand {
         }
         &.form_inline {
             display: flex;
+            gap: 10px;
             align-items: flex-end;
             padding-bottom: 0em;
             border-bottom: none;
             .labelEffect {
                 flex: 1 1 auto;
-                margin-right: 1%;
+                // margin-right: 1%;
                 align-self: center;
                 margin-bottom: .2em;
                 &:before, &:after {
@@ -364,6 +402,7 @@ select::-ms-expand {
                     flex: 0 1 8em;
                     text-align: center;
                     min-width: 8em;
+                    flex-direction: row;
                     input {
                         text-align: center;
                     }
@@ -385,14 +424,16 @@ select::-ms-expand {
             }
         }
         .help {
-            font-size: .813em;
-            color: #888;
-            text-align: right;
-            margin-left: auto;
-            padding: 0 .5em;
-            position: absolute;
-            bottom: -1.75em;
-            right: 0;
+            // font-size: .813em;
+            // color: #888;
+            // text-align: right;
+            // margin-left: auto;
+            // padding: 0 .5em;
+            // position: absolute;
+            // bottom: -1.75em;
+            // right: 0;
+            padding: .1em .5em;
+            background: #f8f8f8; 
         }
         p, p.notice {
             font-size: .875rem;
@@ -467,6 +508,11 @@ select::-ms-expand {
             }
         }
     }
+}
+.form_flex{
+    // input+button 的組合
+    display: flex;
+    gap: 6px;
 }
 //---------------------------------------------form setting--------//
 form, div {
@@ -658,9 +704,11 @@ input[type="reset"]:focus,
 input[type="file"]:focus,
 input[type="tel"]:focus,
 input[type="password"]:focus,
+input[type="date"]:focus,
 textarea:focus,
 select:focus {
-    @include box-shadow(0px 0px 0px 1px transparent);
+    // @include box-shadow(0px 0px 0px 1px transparent);
+    box-shadow: 0 0 0 2px $form-focus;
     outline: none;
 }
 select:focus {
@@ -694,9 +742,11 @@ select {
     .select-value {
         flex: 1 1 100%;
         @include formStyle;
-        background: url(../images/basic/icon_select_arrow.svg) no-repeat right center;
+        background: url(../images/basic/icon_select_arrow.svg) no-repeat right center #F4F4F4;
         background-size: 20px;
-        height: 2.4em;
+        height: 45px;
+        padding: 0 24px 0 0.5em;
+        border-radius: .2em;
     }
     .select-option {
         display: none;

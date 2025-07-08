@@ -795,7 +795,7 @@ body {
 .content_block {
     .flex-form {
         width: 96%;
-        max-width: 50em;
+        // max-width: 50em;
         margin: 1em auto 2em 1em;
     }
 }
@@ -889,15 +889,18 @@ body {
         }
     }
     .log {
-        font-size: .75rem;
+        font-size: .9rem;
         width: 100%;
         background: #F5F5F5;
         border-radius: .2em;
         color: #444;
-        padding: .25em 1em;
+        padding: .75em 1em;
         ul {
             @include li-reset;
-            margin-bottom: .5em;
+            // margin-bottom: .5em;
+            li{
+                padding: 2px 0;
+            }
             span {
                 width: 1em;
                 display: inline-block;

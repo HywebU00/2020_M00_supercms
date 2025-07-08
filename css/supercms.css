@@ -531,6 +531,10 @@ kbd kbd {
   text-align: center;
   padding: 0.3em 0;
 }
+.btn_grp._center {
+  width: 100%;
+  justify-content: center;
+}
 
 .upload_grp .upload_btn, input[type=reset], input[type=submit], button,
 input[type=button], .btn-secondary, .btn-primary, .btn-purple, .btn-red, .btn-orange, .btn-yellow, .btn-blue, .btn-green, .btn {
@@ -1672,10 +1676,9 @@ select::-ms-expand {
 }
 
 .labelEffect {
-  margin-left: 1%;
   display: flex;
-  flex: 1 1 46%;
-  position: relative;
+  flex: 1 1 100%;
+  flex-direction: column;
   margin-bottom: 0.2em;
 }
 @media screen and (max-width: 767px) {
@@ -1684,53 +1687,20 @@ select::-ms-expand {
   }
 }
 .labelEffect.password_toggle input[type=text], .labelEffect.password_toggle input[type=password], .labelEffect.hasBtn input[type=text], .labelEffect.hasBtn input[type=password] {
-  padding-right: 3em;
   letter-spacing: 0.1em;
 }
 .labelEffect > label {
   width: 100%;
-  color: #666;
+  color: #222;
   align-items: flex-start;
   font-size: 1em;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 0px;
-  bottom: 0;
-  height: 100%;
-  padding: 0.6em 0.5em 0.1em;
+  font-weight: bold;
+  padding: 0.6em 0;
   transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.labelEffect > label:before, .labelEffect > label:after {
-  content: "";
-  display: block;
-  width: 0%;
-  left: 50%;
-  position: absolute;
-  bottom: -2px;
-  height: 2px;
-  background: #21baff;
-  transition: 0.2s ease all;
 }
 .labelEffect input, .labelEffect textarea, .labelEffect select {
   flex: 1 1 70%;
   border-radius: 0.2em;
-}
-.labelEffect input:focus ~ label, .labelEffect input.used ~ label, .labelEffect textarea:focus ~ label, .labelEffect textarea.used ~ label, .labelEffect select:focus ~ label, .labelEffect select.used ~ label {
-  bottom: 0;
-  font-size: 0.813em;
-  color: #00646d;
-  padding: 0;
-  pointer-events: none;
-  height: calc(100% + 1.95em);
-}
-.labelEffect input:focus ~ label:before, .labelEffect input.used ~ label:before, .labelEffect textarea:focus ~ label:before, .labelEffect textarea.used ~ label:before, .labelEffect select:focus ~ label:before, .labelEffect select.used ~ label:before {
-  width: 50%;
-  left: 0%;
-}
-.labelEffect input:focus ~ label:after, .labelEffect input.used ~ label:after, .labelEffect textarea:focus ~ label:after, .labelEffect textarea.used ~ label:after, .labelEffect select:focus ~ label:after, .labelEffect select.used ~ label:after {
-  width: 50%;
-  right: 50%;
 }
 .labelEffect input.used ~ label:before, .labelEffect textarea.used ~ label:before, .labelEffect select.used ~ label:before {
   width: 0%;
@@ -1741,11 +1711,11 @@ select::-ms-expand {
   left: 50%;
 }
 .labelEffect [class^=btn], .labelEffect .additonal {
-  flex: 0 1 10%;
   min-width: 0em;
-  margin: 0em 0 0 0.5em;
-  padding: 0.2em 0.25em;
+  margin: 0;
+  padding: 0.2em 1em;
   font-size: 0.938em;
+  height: 48px;
 }
 .labelEffect .btn-icon {
   flex: 0 1 3em;
@@ -1756,18 +1726,16 @@ select::-ms-expand {
   padding: 0.2em 0.25em;
   font-size: 0.938em;
   position: absolute;
-  right: 0.5em;
-  top: 0.35em;
+  right: 2px;
 }
 .labelEffect .btn-icon i {
   font-size: 1.25em;
 }
 .labelEffect .additional {
   white-space: nowrap;
-  font-size: 0.875rem;
-  color: #666;
-  padding: 0 0.5em;
+  padding: 0.5em 0;
   display: flex;
+  gap: 16px;
   align-items: center;
 }
 .labelEffect .additional img {
@@ -1809,7 +1777,6 @@ select::-ms-expand {
 }
 
 .flex-form {
-  font-size: 0.938em;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -1829,14 +1796,13 @@ select::-ms-expand {
   }
 }
 .flex-form .form_grp {
-  flex: 0 1 100%;
   flex: 0 1 calc(100% - 0em);
   display: flex;
   flex-flow: row wrap;
+  gap: 10px;
   padding: 0em;
-  margin-bottom: 1.5em;
-  align-items: center;
-  align-content: flex-start;
+  margin: 0.25em 0;
+  align-items: flex-start;
   position: relative;
 }
 @media screen and (max-width: 767px) {
@@ -1844,15 +1810,26 @@ select::-ms-expand {
     flex-basis: 100%;
   }
 }
+.flex-form .form_grp._titleAlignCenter .form_title {
+  background: pink;
+}
+.flex-form .form_grp._titleAlignCenter:has(.form_content input) .form_title, .flex-form .form_grp._titleAlignCenter:has(.form_content select) .form_title {
+  padding: 1em 0;
+}
+.flex-form .form_grp._titleAlignCenter:has(.form_content input[type=checkbox]) .form_title {
+  padding: 0;
+}
+.flex-form .form_grp .labelEffect {
+  flex: 1 1 auto;
+}
 .flex-form .form_grp .help {
-  font-size: 0.813em;
-  color: #888;
+  font-size: 0.9em;
+  color: #333;
   text-align: right;
   margin-left: auto;
-  padding: 0 0.5em;
-  position: absolute;
-  bottom: -1.75em;
-  right: 0;
+  padding: 0.35em 0;
+  display: block;
+  width: 100%;
 }
 .flex-form .form_grp.error input {
   background: #F5F5F5;
@@ -1874,9 +1851,21 @@ select::-ms-expand {
   width: 50%;
   right: 50%;
 }
+.flex-form .form_grp.error input[type=text],
+.flex-form .form_grp.error input[type=reset],
+.flex-form .form_grp.error input[type=file],
+.flex-form .form_grp.error input[type=tel],
+.flex-form .form_grp.error input[type=password],
+.flex-form .form_grp.error input[type=date],
+.flex-form .form_grp.error textarea,
+.flex-form .form_grp.error select {
+  box-shadow: 0 0 0 2px #FF3E4D;
+  outline: none;
+}
 .flex-form .datepick {
   display: flex;
   flex: 0 1 100%;
+  gap: 0;
   flex-flow: row wrap;
   position: relative;
 }
@@ -1885,7 +1874,6 @@ select::-ms-expand {
 }
 .flex-form .datepick input.calendar {
   width: 100%;
-  padding-right: 2em;
 }
 .flex-form .datepick .btn {
   position: absolute;
@@ -1923,7 +1911,7 @@ select::-ms-expand {
   position: absolute;
   content: "~";
   left: -1em;
-  top: 0.4em;
+  top: 55px;
   font-size: 1.125rem;
 }
 .flex-form .datepick .btn {
@@ -1943,11 +1931,7 @@ select::-ms-expand {
   }
 }
 .flex-form .form_title {
-  position: absolute;
-  font-size: 0.75rem;
-  color: #999;
-  top: -1.75em;
-  left: 0em;
+  font-weight: bold;
 }
 .flex-form .form_content {
   display: flex;
@@ -1962,13 +1946,13 @@ select::-ms-expand {
 }
 .flex-form .form_content.form_inline {
   display: flex;
+  gap: 10px;
   align-items: flex-end;
   padding-bottom: 0em;
   border-bottom: none;
 }
 .flex-form .form_content.form_inline .labelEffect {
   flex: 1 1 auto;
-  margin-right: 1%;
   align-self: center;
   margin-bottom: 0.2em;
 }
@@ -1987,6 +1971,7 @@ select::-ms-expand {
   flex: 0 1 8em;
   text-align: center;
   min-width: 8em;
+  flex-direction: row;
 }
 .flex-form .form_content.form_inline .labelEffect.short input, .flex-form .form_content.form_inline .labelEffect.zip input, .flex-form .form_content.form_inline .labelEffect.ext input, .flex-form .form_content.form_inline .labelEffect.county input, .flex-form .form_content.form_inline .labelEffect.dist input {
   text-align: center;
@@ -2008,14 +1993,8 @@ select::-ms-expand {
   color: #999;
 }
 .flex-form .form_content .help {
-  font-size: 0.813em;
-  color: #888;
-  text-align: right;
-  margin-left: auto;
-  padding: 0 0.5em;
-  position: absolute;
-  bottom: -1.75em;
-  right: 0;
+  padding: 0.1em 0.5em;
+  background: #f8f8f8;
 }
 .flex-form .form_content p, .flex-form .form_content p.notice {
   font-size: 0.875rem;
@@ -2086,6 +2065,11 @@ select::-ms-expand {
   padding: 0.1em 1em;
   max-width: auto;
   right: 0.1em;
+}
+
+.form_flex {
+  display: flex;
+  gap: 6px;
 }
 
 form .form_grp,
@@ -2365,9 +2349,10 @@ input[type=reset]:focus,
 input[type=file]:focus,
 input[type=tel]:focus,
 input[type=password]:focus,
+input[type=date]:focus,
 textarea:focus,
 select:focus {
-  box-shadow: 0px 0px 0px 1px transparent;
+  box-shadow: 0 0 0 2px #21baff;
   outline: none;
 }
 
@@ -2407,9 +2392,11 @@ select:-moz-focusring {
   padding: 0.75em;
   box-sizing: border-box;
   transition: 0.3s ease-out;
-  background: url(../images/basic/icon_select_arrow.svg) no-repeat right center;
+  background: url(../images/basic/icon_select_arrow.svg) no-repeat right center #F4F4F4;
   background-size: 20px;
-  height: 2.4em;
+  height: 45px;
+  padding: 0 24px 0 0.5em;
+  border-radius: 0.2em;
 }
 .select .select-value:hover {
   outline: none;
@@ -6579,7 +6566,6 @@ body.dark {
 
 .content_block .flex-form {
   width: 96%;
-  max-width: 50em;
   margin: 1em auto 2em 1em;
 }
 
@@ -6661,18 +6647,20 @@ body.dark {
   padding: 0.45em 0.25em;
 }
 .publish_block .log {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   width: 100%;
   background: #F5F5F5;
   border-radius: 0.2em;
   color: #444;
-  padding: 0.25em 1em;
+  padding: 0.75em 1em;
 }
 .publish_block .log ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-bottom: 0.5em;
+}
+.publish_block .log ul li {
+  padding: 2px 0;
 }
 .publish_block .log ul span {
   width: 1em;
